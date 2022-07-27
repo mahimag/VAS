@@ -1,52 +1,19 @@
-import { Button, Checkbox, Form, Input } from 'antd';
-import React from 'react';
+import React, { Profiler, useContext, useState } from 'react';
+import Login from './components/Login';
+import { LoginProvider } from "./contexts/LoginContext";
 
 const App: React.FC = () => {
-  const onFinish = (values: any) => {
-    console.log('Success:', values);
-  };
-
-  const onFinishFailed = (errorInfo: any) => {
-    console.log('Failed:', errorInfo);
-  };
+  const [showProfile, setShowProfile] = useState(false);
+  const [username, setUsername] = useState("");
+  let  ctxValue;  
 
   return (
     <div className= "form">
-      <Form
-        name="basic"
-        labelCol={{ span: 8 }}
-        wrapperCol={{ span: 16 }}
-        initialValues={{ remember: true }}
-        onFinish={onFinish}
-        onFinishFailed={onFinishFailed}
-        autoComplete="off"
-      >
-        <Form.Item
-          // label="Username"
-          className="user"
-          name="username"
-          rules={[{ required: true, message: 'Please input your username!' }]}
-        >
-          <Input placeholder="Username" />
-        </Form.Item>
-
-        <Form.Item
-          // label="Password"
-          className="pass"
-          name="password"
-          rules={[{ required: true, message: 'Please input your password!' }]}
-        >
-          <Input.Password placeholder="Password"/>
-        </Form.Item>
-
-        <Form.Item wrapperCol={{ offset: 8, span: 16 }}>
-          <Button className="button" type="primary" htmlType="submit">
-            Enter
-          </Button>
-        </Form.Item>
-      </Form>
+      <LoginProvider>
+          <Login />
+      </LoginProvider>
     </div>
   );
-};
+}
 
 export default App;
