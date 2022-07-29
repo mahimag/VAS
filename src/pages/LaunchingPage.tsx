@@ -5,7 +5,6 @@ import { Button, Form, Input } from 'antd';
 import { createTextChangeRange, updateShorthandPropertyAssignment } from 'typescript';
 
 
-
 const LaunchingPage: React.FC = () => {
     const navigate = useNavigate();
     const ctxValue = useContext(LoginContext) as ContextInterface;
