@@ -9,7 +9,7 @@ function Dashboard(){
     }
     return (
         <div>
-            <button onClick={navigateToLogin}>Login</button>
+            <button onClick={navigateToLogin}>Go To Login</button>
         </div>
     );
 }
