@@ -17,7 +17,7 @@ export default function Routing() {
       <Route path="/" element={<Dashboard />} />
       <Route path="/login" element={<Login />} />
       <Route path="/launch" element={checkAuth ? <LaunchingPage /> : <Navigate to={"/login"} />} />
-      <Route path="/create" element={<ManagePatient />} />
+      <Route path="/patient/create" element={<ManagePatient />} />
       <Route path="/profile" element={<Profile />} />
     </Routes>
   );
