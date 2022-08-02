@@ -3,7 +3,7 @@ import Dashboard from "../pages/Dashboard";
 import LaunchingPage from "../pages/LaunchingPage";
 import Login from "../pages/Login";
 import ManagePatient from "../pages/ManagePatient";
-import Profile from "../pages/Profile";
+import Profile from "../pages/Profile/Profile";
 
 var checkAuth = false;
 
