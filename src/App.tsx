@@ -1,6 +1,5 @@
 import React, { Profiler, useContext, useState } from 'react';
 import Login from './pages/Login';
-import { LoginProvider } from "./contexts/LoginContext";
 import { BrowserRouter } from "react-router-dom";
 import { Provider } from "react-redux";
 import Routing from './routes/Routing';

@@ -43,7 +43,7 @@ export const patientInfoSlice = createSlice({
   reducers: {
     setPatientInfo: (state, action) => {
         state.patientData = action.payload;
-        console.log('testing 456 :', state.patientData);
+        // console.log('testing 456 :', state.patientData);
     }
   },
 })

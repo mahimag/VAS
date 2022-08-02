@@ -15,61 +15,14 @@ import React, { useState } from 'react';
 
     const { Option } = Select;
     
-    const residences = [
-    {
-        value: 'zhejiang',
-        label: 'Zhejiang',
-        children: [
-        {
-            value: 'hangzhou',
-            label: 'Hangzhou',
-            children: [
-            {
-                value: 'xihu',
-                label: 'West Lake',
-            },
-            ],
-        },
-        ],
-    },
-    {
-        value: 'jiangsu',
-        label: 'Jiangsu',
-        children: [
-        {
-            value: 'nanjing',
-            label: 'Nanjing',
-            children: [
-            {
-                value: 'zhonghuamen',
-                label: 'Zhong Hua Men',
-            },
-            ],
-        },
-        ],
-    },
-    ];
-    
     const formItemLayout = {
     labelCol: {
         xs: { span: 24 },
-        sm: { span: 8 },
+        sm: { span: 11 },
     },
     wrapperCol: {
         xs: { span: 24 },
         sm: { span: 16 },
-    },
-    };
-    const tailFormItemLayout = {
-    wrapperCol: {
-        xs: {
-        span: 24,
-        offset: 0,
-        },
-        sm: {
-        span: 16,
-        offset: 8,
-        },
     },
     };
     
@@ -80,39 +33,6 @@ import React, { useState } from 'react';
     const onFinish = (values: any) => {
         console.log('Received values of form: ', values);
     };
-    
-    const prefixSelector = (
-        <Form.Item name="prefix" noStyle>
-        <Select style={{ width: 70 }}>
-            <Option value="86">+86</Option>
-            <Option value="87">+87</Option>
-        </Select>
-        </Form.Item>
-    );
-    
-    const suffixSelector = (
-        <Form.Item name="suffix" noStyle>
-        <Select style={{ width: 70 }}>
-            <Option value="USD">$</Option>
-            <Option value="CNY">¥</Option>
-        </Select>
-        </Form.Item>
-    );
-    
-    const [autoCompleteResult, setAutoCompleteResult] = useState<string[]>([]);
-    
-    const onWebsiteChange = (value: string) => {
-        if (!value) {
-        setAutoCompleteResult([]);
-        } else {
-        setAutoCompleteResult(['.com', '.org', '.net'].map(domain => `${value}${domain}`));
-        }
-    };
-    
-    const websiteOptions = autoCompleteResult.map(website => ({
-        label: website,
-        value: website,
-    }));
     
     //return statements
     return (
@@ -127,11 +47,11 @@ import React, { useState } from 'react';
         }}
         scrollToFirstError
         >
-        <Form.Item name={['user', 'name']} label="First Name" rules={[{ required: true }]}>
+        <Form.Item name="firstName" label="First Name" rules={[{ required: true }]}>
             <Input />
         </Form.Item>
 
-        <Form.Item name={['user', 'name']} label="Last Name" rules={[{ required: true }]}>
+        <Form.Item name="lastName" label="Last Name" rules={[{ required: true }]}>
             <Input />
         </Form.Item>
 
@@ -139,7 +59,7 @@ import React, { useState } from 'react';
         <DatePicker />
         </Form.Item>
 
-        <Form.Item name={['user', 'name']} label="Ethnicity" rules={[{ required: true }]}>
+        <Form.Item name="ethnicity" label="Ethnicity" rules={[{ required: true }]}>
             <Input />
         </Form.Item>
 
@@ -172,36 +92,36 @@ import React, { useState } from 'react';
             <Input />
         </Form.Item>
     
-        <Form.Item name={['user', 'name']} label="Registered Address" rules={[{ required: true }]}>
+        <Form.Item name="address" label="Registered Address" rules={[{ required: true }]}>
             <Input />
         </Form.Item>
 
     
-        <Form.Item name={['user', 'name']} label="Street" rules={[{ required: true }]}>
+        <Form.Item name="street" label="Street" rules={[{ required: true }]}>
             <Input />
         </Form.Item>
 
-        <Form.Item name="City" label="City" rules={[{ required: true }]}>
+        <Form.Item name="city" label="City" rules={[{ required: true }]}>
             <Input />
         </Form.Item>
 
-        <Form.Item name="State" label="State" rules={[{ required: true }]}>
+        <Form.Item name="state" label="State" rules={[{ required: true }]}>
             <Input />
         </Form.Item>
 
-        <Form.Item name="PaymentInformation" label="Payment Information" rules={[{ required: true }]}>
+        <Form.Item name="paymentInformation" label="Payment Information" rules={[{ required: true }]}>
             <Input />
         </Form.Item>
 
-        <Form.Item name="InsuranceId" label="Insurance Id" rules={[{ required: true }]}>
+        <Form.Item name="insuranceId" label="Insurance Id" rules={[{ required: true }]}>
             <Input />
         </Form.Item>
 
-        <Form.Item name="MemberId" label="Member Id" rules={[{ required: true }]}>
+        <Form.Item name="memberId" label="Member Id" rules={[{ required: true }]}>
             <Input />
         </Form.Item>
 
-        <Form.Item name="InsuranceProvider" label="Insurance Provider" rules={[{ required: true }]}>
+        <Form.Item name="insuranceProvider" label="Insurance Provider" rules={[{ required: true }]}>
             <Input />
         </Form.Item>
 
