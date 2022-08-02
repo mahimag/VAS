@@ -2,10 +2,12 @@ import { Button, Form, Input, Select, DatePicker, Upload } from "antd";
 import { UploadOutlined } from "@ant-design/icons";
 import React from "react";
 import { useNavigate } from "react-router-dom";
-import { setPatientInfo } from "../features/PatientInfoSlice";
+import { setPatientInfo } from "../../features/PatientInfoSlice";
 import { useDispatch } from "react-redux";
 
-const ManagePatient: React.FC = () => {
+import "./ManagePatientForm.css";
+
+const ManagePatientForm: React.FC = () => {
   const { Option } = Select;
   const navigate = useNavigate();
   const dispatch = useDispatch();
@@ -19,12 +21,12 @@ const ManagePatient: React.FC = () => {
 
   const formItemLayout = {
     labelCol: {
-      xs: { span: 24 },
-      sm: { span: 11 },
+      xs: { span: 8 },
+      sm: { span: 8 },
     },
     wrapperCol: {
-      xs: { span: 24 },
-      sm: { span: 16 },
+      xs: { span: 8 },
+      sm: { span: 8 },
     },
   };
   const [form] = Form.useForm();
@@ -43,6 +45,8 @@ const ManagePatient: React.FC = () => {
       name="register"
       onFinish={onFinish}
       scrollToFirstError
+      className="patientForm"
+      size="large"
     >
       <Form.Item
         name="firstName"
@@ -165,4 +169,4 @@ const ManagePatient: React.FC = () => {
   );
 };
 
-export default ManagePatient;
+export default ManagePatientForm;

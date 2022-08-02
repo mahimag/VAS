@@ -1,0 +1,8 @@
+.loginForm label{
+    font-size: 18px;
+    margin-right: 10px;
+}
+
+.loginForm .loginForm__btn{
+    margin-top: 45px;
+}

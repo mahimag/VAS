@@ -4,6 +4,7 @@ import { useNavigate } from "react-router-dom";
 import { useDispatch, useSelector } from "react-redux";
 import { RootState } from "../../store";
 import { setLoggedIn } from "../..//features/Auth/AuthSlice";
+import "./LoginForm.css";
 
 const LoginForm: React.FC = () => {
   const test = useSelector((state: RootState) => state.auth.isLoggedIn);
@@ -29,12 +30,15 @@ const LoginForm: React.FC = () => {
   return (
     <Form
       name="basic"
-      labelCol={{ span: 8 }}
-      wrapperCol={{ span: 16 }}
+      labelCol={{ span: 9 }}
+      wrapperCol={{ span: 15 }}
       initialValues={{ remember: true }}
       onFinish={onFinish}
       onFinishFailed={onFinishFailed}
       autoComplete="off"
+      size="large"
+      className="loginForm"
+      style={{ width: "400px" }}
     >
       <Form.Item
         label="Username"
@@ -52,7 +56,10 @@ const LoginForm: React.FC = () => {
         <Input.Password />
       </Form.Item>
 
-      <Form.Item wrapperCol={{ offset: 8, span: 16 }}>
+      <Form.Item
+        className="loginForm__btn"
+        wrapperCol={{ offset: 11, span: 16 }}
+      >
         {/* <Button onClick={() => onSubmitHandler(ctxValue)} type="primary" htmlType="submit"> */}
         <Button type="primary" htmlType="submit">
           Submit

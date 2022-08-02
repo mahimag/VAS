@@ -4,10 +4,10 @@ import {
   Routes,
   Navigate,
 } from "react-router-dom";
-import Dashboard from "../pages/Dashboard";
-import LaunchingPage from "../pages/LaunchingPage";
+import Dashboard from "../pages/dashboard/Dashboard";
+import LaunchingPage from "../pages/launchpage/LaunchingPage";
 import Login from "../pages/login/Login";
-import ManagePatient from "../pages/ManagePatient";
+import ManagePatient from "../pages/managePatient/ManagePatient";
 import Profile from "../pages/Profile/Profile";
 
 var checkAuth = false;
