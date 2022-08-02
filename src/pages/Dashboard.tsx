@@ -1,6 +1,5 @@
-import { Button, Form, Input } from 'antd';
+import React from "react";
 import { useNavigate } from 'react-router-dom';
-// import {BrowserRouter as Router, Route} from 'react-router-dom';
 
 function Dashboard(){
     const navigate = useNavigate();

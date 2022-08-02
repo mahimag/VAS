@@ -1,7 +1,4 @@
 import { createSlice } from '@reduxjs/toolkit'
-import type { PayloadAction } from '@reduxjs/toolkit'
-import { statSync } from 'fs'
-
 
 export interface authState {
   isLoggedIn: boolean
@@ -20,12 +17,6 @@ export const authSlice = createSlice({
         state.isLoggedIn = action.payload;
         console.log('testing 123 :', state.isLoggedIn);
     }
-    // authPass: (state) => {
-    //   state.isLoggedIn = true;
-    // },
-    // authFail: (state) => {
-    //   state.isLoggedIn = false;
-    // },
   },
 })
 

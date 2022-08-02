@@ -1,39 +1,23 @@
+import React from "react";
 import { Button, Form, Input } from "antd";
-import React, { useState, useContext } from "react";
 import { useNavigate } from "react-router-dom";
 import { useDispatch, useSelector } from "react-redux";
-import { RootState } from "../store";
-import { setLoggedIn } from "../features/Auth/AuthSlice";
+import { RootState } from "../../store";
+import { setLoggedIn } from "../..//features/Auth/AuthSlice";
 
-// const changeIsLoggedIn = (ctx: ContextInterface) => {
-//   ctx.setIsLoggedIn((prev: boolean) => !prev);
-//   console.log("This user is, ", ctx.isLoggedIn);
-// }
-
-// const onSubmitHandler = (ctxValue: ContextInterface) => {
-//   ctxValue.setIsLoggedIn((prev) => !prev);
-//   console.log(ctxValue.isLoggedIn);
-// }
-
-const Login: React.FC = () => {
-  const test = useSelector((state: RootState) => state.auth.isLoggedIn );
-
-  // console.log("testing123, " + test);
+const LoginForm: React.FC = () => {
+  const test = useSelector((state: RootState) => state.auth.isLoggedIn);
 
   const navigate = useNavigate();
-  // const ctxValue = useContext(LoginContext) as ContextInterface;
   const dispatch = useDispatch();
-
-
 
   const onFinish = (values: any) => {
     if (values.username === "mahima" && values.password === "gurung") {
       //add to Local Storage
-      localStorage.setItem('LoggedIn', "true");
+      localStorage.setItem("LoggedIn", "true");
       dispatch(setLoggedIn(true));
       navigate("../launch");
-    }
-    else{
+    } else {
       dispatch(setLoggedIn(false));
     }
   };
@@ -41,11 +25,6 @@ const Login: React.FC = () => {
   const onFinishFailed = (errorInfo: any) => {
     console.log("Failed:", errorInfo);
   };
-
-  // return (
-  //       <button onClick={() => onSubmitHandler(ctxValue)}>Login</button>
-
-  // );
 
   return (
     <Form
@@ -75,13 +54,12 @@ const Login: React.FC = () => {
 
       <Form.Item wrapperCol={{ offset: 8, span: 16 }}>
         {/* <Button onClick={() => onSubmitHandler(ctxValue)} type="primary" htmlType="submit"> */}
-        <Button type="primary"
-          htmlType="submit"
-        >
+        <Button type="primary" htmlType="submit">
           Submit
         </Button>
       </Form.Item>
     </Form>
   );
 };
-export default Login;
+
+export default LoginForm;
