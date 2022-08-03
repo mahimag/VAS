@@ -8,7 +8,7 @@ const Login: React.FC = () => {
 
   return (
     <div className="login">
-      <Title className="login__title">Welcome to VAS!</Title>
+      <Title className="login__title">Login</Title>
       <LoginForm />
     </div>
   );

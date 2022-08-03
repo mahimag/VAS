@@ -1,14 +1,11 @@
 import React from "react";
 import { Button, Form, Input } from "antd";
 import { useNavigate } from "react-router-dom";
-import { useDispatch, useSelector } from "react-redux";
-import { RootState } from "../../store";
+import { useDispatch } from "react-redux";
 import { setLoggedIn } from "../..//features/Auth/AuthSlice";
 import "./LoginForm.css";
 
 const LoginForm: React.FC = () => {
-  const test = useSelector((state: RootState) => state.auth.isLoggedIn);
-
   const navigate = useNavigate();
   const dispatch = useDispatch();
 
@@ -60,7 +57,6 @@ const LoginForm: React.FC = () => {
         className="loginForm__btn"
         wrapperCol={{ offset: 11, span: 16 }}
       >
-        {/* <Button onClick={() => onSubmitHandler(ctxValue)} type="primary" htmlType="submit"> */}
         <Button type="primary" htmlType="submit">
           Submit
         </Button>

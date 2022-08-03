@@ -1,7 +1,6 @@
 import React from "react";
 import { useSelector } from "react-redux";
 import { RootState } from "../../store";
-//import './Profile.css';
 
 const Profile: React.FC = () => {
   const getData = useSelector(
