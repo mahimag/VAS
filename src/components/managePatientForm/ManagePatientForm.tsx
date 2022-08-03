@@ -4,7 +4,6 @@ import React from "react";
 import { useNavigate } from "react-router-dom";
 import { setPatientInfo } from "../../features/PatientInfoSlice";
 import { useDispatch } from "react-redux";
-
 import "./ManagePatientForm.css";
 
 const ManagePatientForm: React.FC = () => {
@@ -33,7 +32,7 @@ const ManagePatientForm: React.FC = () => {
 
   const onFinish = (values: any) => {
     dispatch(setPatientInfo(values));
-    navigate("../launch");
+    navigate("../profile");
     console.log("Received values of form: ", values);
   };
 

@@ -1,0 +1,14 @@
+.launch{
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column  ;
+}
+
+.launch .launch__btn{
+    margin-bottom: 45px;
+    display: block;
+    justify-content: center;
+    align-items: center;
+}
