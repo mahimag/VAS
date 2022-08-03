@@ -22,7 +22,16 @@ const LaunchingPage: React.FC = () => {
         htmlType="submit"
         onClick={() => navigate("/vaccine/create")}
       >
-        Create Vaccine Profile
+        Add Vaccine
+      </Button>
+
+      <Button
+        className="launch__btn"
+        type="primary"
+        htmlType="submit"
+        onClick={() => navigate("/appointment/create")}
+      >
+        Schedule Appointment
       </Button>
     </div>
   );

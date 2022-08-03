@@ -1,0 +1,23 @@
+.appointmentForm{
+    width: 100%;
+}
+
+.appointmentForm h2{
+    text-align: center;
+}
+
+.appointmentForm .appointmentForm__cb{
+    display: flex;
+    justify-content: center;
+}
+
+.eligibility{
+    display: flex;
+    justify-content: center;
+}
+
+.screening{
+    display: flex;
+    justify-content: center;
+    text-align: center;
+}

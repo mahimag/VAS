@@ -11,6 +11,8 @@ import ManagePatient from "../pages/managePatient/ManagePatient";
 import Profile from "../pages/Profile/Profile";
 import VaccineCreate from "../pages/vaccine/VaccineCreate";
 import VaccineList from "../pages/vaccine/VaccineList";
+import Appointment from "../pages/appointment/Appointment";
+import AppointmentList from "../pages/appointment/AppointmentList";
 
 var checkAuth = false;
 
@@ -27,9 +29,11 @@ export default function Routing() {
         element={checkAuth ? <LaunchingPage /> : <Navigate to={"/login"} />}
       />
       <Route path="/patient/create" element={<ManagePatient />} />
-      <Route path="/vaccine/create" element={<VaccineCreate />} />
       <Route path="/profile" element={<Profile />} />
+      <Route path="/vaccine/create" element={<VaccineCreate />} />
       <Route path="/vaccinelist" element={<VaccineList />} />
+      <Route path="/appointment/create" element={<Appointment />} />
+      <Route path="/appointmentlist" element={<AppointmentList />} />
     </Routes>
   );
 }
